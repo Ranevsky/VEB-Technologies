@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Konscious.Security.Cryptography.Argon2" Version="1.3.0" />
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.16" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Common\Common.csproj" />
+        <ProjectReference Include="..\EntityFrameworkCoreLibrary\EntityFrameworkCoreLibrary.csproj" />
+        <ProjectReference Include="..\ExceptionLibrary.Handlers\ExceptionLibrary.Handlers.csproj" />
+        <ProjectReference Include="..\HealthCheckLibrary.EntityFrameworkCore.DependencyInjection\HealthCheckLibrary.EntityFrameworkCore.DependencyInjection.csproj" />
+        <ProjectReference Include="..\Identity.Application\Identity.Application.csproj" />
+        <ProjectReference Include="..\LoggerLibrary.MassTransit.RabbitMq\LoggerLibrary.MassTransit.RabbitMq.csproj" />
+        <ProjectReference Include="..\LoggerLibrary.MassTransit\LoggerLibrary.MassTransit.csproj" />
+        <ProjectReference Include="..\LoggerLibrary\LoggerLibrary.csproj" />
+        <ProjectReference Include="..\ServiceLibrary\ServiceLibrary.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+            <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.22\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>
